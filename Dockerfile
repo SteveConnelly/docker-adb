@@ -2,6 +2,8 @@ FROM debian:jessie
 
 MAINTAINER softsam
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # Install all dependencies
 RUN apt-get update && \
     apt-get install -y wget openjdk-7-jre-headless libc6-i386 lib32stdc++6 qemu-kvm libvirt-bin && \
